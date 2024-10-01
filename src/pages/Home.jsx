@@ -1,18 +1,29 @@
 import React from 'react'
 import bg8 from "/bg8.jpg?urlbg8.jpg"
 import bg7 from "/bg7.jpg?urlbg7.jpg"
+
+import pr1 from "/pr1.png?urlpr1.png"
+import pro2 from "/pro2.png?urlpro2.png"
 import { FaPaperPlane } from "react-icons/fa"
 import MessageWindow from '../components/MessageWindow'
 function Home() {
 
-    let [messages,setMessages]=React.useState([{id:1, mess:"hi",name:"sarah"},{id:2,mess:"hello",name:"john"}])
+    let [messages,setMessages] = React.useState([])
+    // {id:1, mess:"hi",name:"sarah"},{id:2,mess:"hello",name:"john"}
     let orangeBorder ="border-[1px] border-[#7c5545]"
     let blueBorder = "border-[1px] border-[#356277]"
 
+    let [nameOne,setnameOne] =React.useState({name:"",id:1})
+    let [nameTwo,setnameTwo] =React.useState({name:"",id:2})
     
 
+
+
+    
+   
   return (
-    <div  className='bg-slate-900 max-sm:block flex justify-center h-screen items-center max-sm:space-x-0 space-x-1  ' >
+    <div  className='bg-slate-900 max-sm:block flex justify-center h-screen items-center max-sm:space-x-0 space-x-10 max-sm:p-0 p-8 ' >
+      
       {/* <div className="bg-black max-sm:h-[47%] max-sm:w-[100%] w-[50%] h-[100vh]  relative flex flex-col justify-center items-center" >
         <img src={bg7} alt="" className='from-black to-transparent  w-[100%] object-cover h-[100%]     opacity-60'/>
         <div className='from-20% to-70% filter-layer w-[100%] h-[100%] bg-transparent absolute top-0 from-black to-transparent bg-gradient-to-t' ></div>
@@ -25,9 +36,10 @@ function Home() {
 
         </div>
       </div> */}
-      <MessageWindow name="sarah" setMessages ={setMessages} messages={messages} glassColor="rgba(4, 25, 44, 0.44)" src={bg7}/>
-      <MessageWindow name="john" setMessages ={setMessages} messages={messages} glassColor="rgba(179, 93, 25, 0.13)" src={bg8}/>
 
+      <MessageWindow partnerName={nameTwo.name} userIcon={pro2} userId={nameOne.id} setName={setnameOne} name={nameOne.name} setMessages ={setMessages} messages={messages} glassColor="rgba(4, 25, 44, 0.44)" src={bg7}/>
+      <MessageWindow partnerName={nameOne.name} userIcon={pr1} userId={nameTwo.id} setName={setnameTwo} name={nameTwo.name} setMessages ={setMessages} messages={messages} glassColor="rgba(179, 93, 25, 0.13)" src={bg8}/>
+      
       {/* <div className='bg-black max-sm:h-[47%] max-sm:w-[100%] w-[50%] h-[100vh]  relative max-sm:mt-5 m-2 flex flex-col justify-center items-center' >
       <img src={bg8} alt="" className='from-black to-transparent w-[100%]  object-cover h-[100%]    opacity-80' />
       <div className='from-20% to-70% filter-layer w-[100%] h-[100%] bg-transparent absolute top-0 from-black to-transparent bg-gradient-to-t' ></div>
@@ -39,6 +51,7 @@ function Home() {
 
       </div>
       </div> */}
+    
     </div>
   )
 }

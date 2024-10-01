@@ -72,3 +72,51 @@ body{
 *::-webkit-scrollbar-thumb:active {
   background-color: #97B5B9;
 }
+
+textarea:focus{
+  outline:none;
+  white-space: pre-line;
+}
+
+input:focus{
+  outline:none;
+  white-space: pre-line;
+}
+
+
+.colored {
+  /* background-color: rgb(255, 0, 0) !important;
+  animation: rainbow 2s normal none infinite; */
+ 
+  background-color: rgb(255, 0, 0);
+    transition: 0.5s;
+  content:"";
+ 
+  transform: scale(1.1);
+  border-radius: 50%;  
+
+  right: -0px;
+
+  z-index: -1;
+  position: absolute;
+
+}
+
+.black{
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+.send-button:hover ~.colored {
+  background-color: rgb(135, 5, 5); ;
+}
+
+@keyframes rainbow {
+  0% {
+    filter: hue-rotate(360deg);
+  }
+
+  100% {
+    filter: hue-rotate(0deg);
+  }
+}
