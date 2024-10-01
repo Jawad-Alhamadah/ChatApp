@@ -71,7 +71,7 @@ function MessageWindow(props) {
     return (
         <div className="p-4 bg-black max-sm:h-[48%] max-sm:space-y-1 max-sm:w-[100%] w-[20em] h-[90vh] rounded-3xl overflow-hidden  relative flex flex-col justify-center items-center" >
               <ToastContainer/>
-            <div className="max-sm:space-x-4 max-sm:pl-10 max-sm:pb-2 w-[100%] bg-[#000000ae] absolute top-0 z-10 max-sm:flex-row flex flex-col items-center max-sm:justify-start">
+            <div className="max-sm:space-x-4 max-sm:pl-10 max-sm:pb-2 w-[100%] bg-[#000000c0] absolute top-0 z-10 max-sm:flex-row flex flex-col items-center max-sm:justify-start">
                 <img src={props.userIcon} alt="" className='  space-x-4 max-sm:size-10 size-12 rounded-full mt-5' />
                 <h2 className='text-white items-center text-center'>{props.partnerName}</h2>
             </div>
@@ -129,15 +129,15 @@ function MessageWindow(props) {
                 <div className=' text-white absolute space-y-4 text-lg w-[100%] h-[100%] z-20 bg-[#2d2939] duration-500 flex flex-col justify-center items-center'>
                     <label htmlFor=""> Enter Your Name</label>
                     <input onChange={handleNameChangeInput} type="text"  className='bg-[#3f3d53] rounded-xl border-[1px] border-gray-600 p-2 w-[80%]'/>
-                    <button onClick={handleSubmit} className='bg-[#2e45c6] p-2 shadow-md hover:bg-[#1c2264]' >Submit</button>
+                    <button onClick={handleSubmit} className='bg-[#2e45c6] p-2 shadow-md  hover:bg-[#1c2264]' >Submit</button>
                 </div> 
                 
                 }
             <div className=' mb-5 justify-between items-center w-[90%] max-sm:h-[10%] h-[8%] absolute bottom-2 flex space-x-2 max-sm:mb-5  '>
                 
-                <textarea value={value} onChange={handleInputChange}  type="text" className='pl-2 p-1 bg-[#5d636f] resize-none  max-sm:h-[100%] h-[75%] rounded-lg  w-[85%] focus:border-red-500 focus:border-2 flex flex-wrap' />
+                <textarea value={value} onChange={handleInputChange}  type="text" className='text-white pl-2 p-1 bg-[#5d636f] resize-none  max-sm:h-[100%] h-[75%] rounded-lg  w-[85%] focus:border-red-500 focus:border-2 flex flex-wrap' />
               
-                <button onClick={handleSend} className=' border-[1px] border-white  relative  duration-300 hover:scale-125  bg-black w-10  rounded-3xl flex justify-center items-center h-[75%]'> <FaPaperPlane color='white' /></button>
+                <button onClick={handleSend} className=' glow-on-hover border-[1px] border-white  relative  duration-300 hover:scale-125  bg-black w-10  rounded-3xl flex justify-center items-center h-[75%]'> <FaPaperPlane color='white' /></button>
                 
             </div>
         </div>
