@@ -96,13 +96,13 @@ function MessageWindow(props) {
 
                                     {
                                     info.userId === item.userId ? 
-                                    <div className=' '>
+                                    <div className='flex flex-col items-end'>
                                         <h2 className='mt-1 tracking-wide capitalize  text-end text-md text-normal'>{item.name}</h2>
-                                        <div className='flex flex-col items-end p-1 bg-orange-500 rounded-tr-none rounded-2xl mr-3 text-start'>
-                                            <p className= " break-all text-md tracking-wide p-1  max-w[50%] inline-flex ">{item.mess}</p>
+                                        <div className='p-2 bg-orange-500 rounded-tr-none rounded-2xl '>
+                                            <p className= " break-all text-md tracking-wide p-1  max-w[50%] inline-block ">{item.mess}</p>
                                            
                                         </div>
-                                        <h1 className='pl-4 text-end text-sm text-gray-300'>{item.hours}:{item.minutes}</h1> 
+                                        <h1 className='pl-4 text-end text-sm text-gray-400'>{item.hours}:{item.minutes}</h1> 
                                         
                                       
                                     </div> 
@@ -113,7 +113,7 @@ function MessageWindow(props) {
                                              <p className= "break-all text-md tracking-wide bg-[#4c6e89] p-2 rounded-tl-none rounded-2xl  max-w[50%] inline-block ">{item.mess}</p> 
                                             
                                          </div>
-                                         <h1 className='text-start text-sm text-gray-300'>{item.hours}:{item.minutes} </h1> 
+                                         <h1 className='text-start text-sm text-gray-400'>{item.hours}:{item.minutes} </h1> 
                                     </div> 
                                     
                                 }
